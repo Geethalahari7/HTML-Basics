@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Tables Demonstration</h1>
+
+    <h2>Basic Table</h2>
+    <table border="1">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>AGE</th>
+        </tr>
+        <tr>
+            <td>Ravi</td>
+            <td>Kumar</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>Pranathi</td>
+            <td>Shetty</td>
+            <td>23</td>
+        </tr>
+            <td>Vaishali</td>
+            <td>Gowda</td>
+            <td>28</td>
+    </table>
+
+    <h2>Table with Rowspan and Colspan</h2>
+    <table border="1">
+        <tr>
+            <th>TimeTable</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1st hour</td>
+            <td>English</td>
+            <td>Maths</td>
+        </tr>
+        <tr>
+            <td colspan="2">Sports</td>
+        </tr>
+        <tr>
+            <td>2nd hour</td>
+            <td>Computer lab</td>
+            <td>Biology</td>
+        </tr>
+    </table>
+
+</body>
+</html>
