@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Largest Number</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Find the Largest Number</h1>
+    <button onclick="findLargest()">Enter Numbers</button>
+    <p id="instruction">Click the button to enter numbers.</p>
+    <p id="result"></p>
+
+    <script>
+        function findLargest() {
+            let input = prompt("Enter numbers separated by commas:");
+            if (input) {
+                let numbers = input.split(',').map(num => parseFloat(num.trim()));
+                if (numbers.some(isNaN)) {
+                    document.getElementById("result").innerText = "Invalid input. Please enter valid numbers.";
+                } else {
+                    let largest = Math.max(...numbers);
+                    document.getElementById("result").innerText = "The largest number is: " + largest;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
